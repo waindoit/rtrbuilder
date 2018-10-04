@@ -82,6 +82,7 @@
                   case('g_penyusunan');include('penyusunan/penyusunanGantt.php');break;
                   case('suitability');include('publish/suitability.php');break;
                   case('urbanperformance');include('publish/urbanperformance.php');break;
+                  case('erdasapollo');include('publish/erdasapollo.php');break;
                 }
                 }
         ?>

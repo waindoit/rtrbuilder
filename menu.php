@@ -43,6 +43,9 @@
                                     <li>
                                         <a href="index.php?menu=urbanperformance">Uber Performance</a>
                                     </li>
+                                    <li>
+                                        <a href="index.php?menu=erdasapollo">ERDAS APOLLO</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="has-sub">
