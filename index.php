@@ -19,7 +19,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>BPN</title>
+    <title>ATR/BPN</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -80,6 +80,8 @@
                   case('penyusunan');include('penyusunan/penyusunan.php');break;
                   case('t_penyusunan');include('penyusunan/tambah.php');break;
                   case('g_penyusunan');include('penyusunan/penyusunanGantt.php');break;
+                  case('suitability');include('publish/suitability.php');break;
+                  case('urbanperformance');include('publish/urbanperformance.php');break;
                 }
                 }
         ?>

@@ -33,11 +33,17 @@
                                     <span class="bot-line"></span>Legal</a>
 
                             </li>
-                            <li>
+                            <li class="has-sub">
                                 <a href="#">
-                                    <i class="fas fa-globe"></i>
                                     <span class="bot-line"></span>Publish</a>
-
+                                <ul class="header3-sub-list list-unstyled">
+                                    <li>
+                                        <a href="index.php?menu=suitability">Suitability</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.php?menu=urbanperformance">Uber Performance</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="has-sub">
                                 <a href="#">
