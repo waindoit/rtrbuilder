@@ -36,7 +36,7 @@ if ($simpan == 'delete'){
   $queryExec = $queryDelete;
 }
 
-echo $queryExec;
+// echo $queryExec;
 
 if($simpan != ''){
 
