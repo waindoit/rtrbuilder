@@ -101,14 +101,14 @@
     if (ctx) {
       ctx.height = 150;
       var myChart = new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
-          labels: ["Januari", "Pebuari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
+          labels: ["Penyusunan", "Rekom Gubernur", "Persub", "DPRD", "Evaluasi Gubernur"],
           type: 'line',
           defaultFontFamily: 'Poppins',
           datasets: [{
-            label: "Rencana",
-            data: [1, 3, 5, 7, 8, 10, 12,13, 14, 15, 16, 17],
+            label: "Progress",
+            data: [17, 5, 8, 15, 10, 0],
             backgroundColor: 'transparent',
             borderColor: 'rgba(40,167,69,0.75)',
             borderWidth: 3,
@@ -116,16 +116,6 @@
             pointRadius: 5,
             pointBorderColor: 'transparent',
             pointBackgroundColor: 'rgba(40,167,69,0.75)',
-          }, {
-            label: "Realisasi",
-            data: [1, 2, 2, 4, 4, 5, 5,6, 6, 6, 6, 6],
-            backgroundColor: 'transparent',
-            borderColor: 'rgba(220,53,69,0.75)',
-            borderWidth: 3,
-            pointStyle: 'circle',
-            pointRadius: 5,
-            pointBorderColor: 'transparent',
-            pointBackgroundColor: 'rgba(220,53,69,0.75)',
           }]
         },
         options: {
@@ -194,6 +184,93 @@
   }
 
 
+  try {
+    //rtrw-provinsi
+    var ctx = document.getElementById("rtrw-provinsi");
+    if (ctx) {
+      ctx.height = 150;
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ["Penyusunan", "Rekom Gubernur", "Persub", "DPRD", "Evaluasi Gubernur"],
+          type: 'line',
+          defaultFontFamily: 'Poppins',
+          datasets: [{
+            label: "Progress",
+            data: [34, 21, 11, 27, 10, 0],
+            backgroundColor: 'transparent',
+            borderColor: 'rgba(40,167,69,0.75)',
+            borderWidth: 3,
+            pointStyle: 'circle',
+            pointRadius: 5,
+            pointBorderColor: 'transparent',
+            pointBackgroundColor: 'rgba(40,167,69,0.75)',
+          }]
+        },
+        options: {
+          responsive: true,
+          tooltips: {
+            mode: 'index',
+            titleFontSize: 12,
+            titleFontColor: '#000',
+            bodyFontColor: '#000',
+            backgroundColor: '#fff',
+            titleFontFamily: 'Poppins',
+            bodyFontFamily: 'Poppins',
+            cornerRadius: 3,
+            intersect: false,
+          },
+          legend: {
+            display: false,
+            labels: {
+              usePointStyle: true,
+              fontFamily: 'Poppins',
+            },
+          },
+          scales: {
+            xAxes: [{
+              display: true,
+              gridLines: {
+                display: false,
+                drawBorder: false
+              },
+              scaleLabel: {
+                display: false,
+                labelString: 'Month'
+              },
+              ticks: {
+                fontFamily: "Poppins"
+              }
+            }],
+            yAxes: [{
+              display: true,
+              gridLines: {
+                display: false,
+                drawBorder: false
+              },
+              scaleLabel: {
+                display: true,
+                labelString: 'Value',
+                fontFamily: "Poppins"
+
+              },
+              ticks: {
+                fontFamily: "Poppins"
+              }
+            }]
+          },
+          title: {
+            display: false,
+            text: 'Normal Legend'
+          }
+        }
+      });
+    }
+
+
+  } catch (error) {
+    console.log(error);
+  }
 
 
 
