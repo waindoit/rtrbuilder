@@ -114,7 +114,28 @@
 
   <script type="text/javascript">
       $(document).ready( function () {
-          $('#barang').DataTable();
+
+            $('#barang').dataTable( {
+              "columns": [
+                { "width": "1%" },
+                { "width": "30%" },
+                { "width": "20%" },
+                { "width": "10%" },
+                { "width": "10%" },
+                { "width": "15%" },
+                { "width": "20%" }
+              ]
+            } );
+
+            $('#penyusunan').dataTable( {
+              "columns": [
+                { "width": "1%" },
+                { "width": "40%" },
+                { "width": "30%" },
+                { "width": "10%" },
+                { "width": "10%" }
+              ]
+            } );
       } );
   </script>
 

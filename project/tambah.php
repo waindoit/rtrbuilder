@@ -12,6 +12,9 @@ $queryEdit = "SELECT *
 $resultEdit = mysqli_query($koneksi, $queryEdit);
 $data  = mysqli_fetch_array($resultEdit);
 
+$source = $data['tanggal_rencana'];
+$tanggal_rencana =  new DateTime($source);
+
 // echo $data['codesDesc1'];
 
 
@@ -27,6 +30,10 @@ $data  = mysqli_fetch_array($resultEdit);
                                             <h3 class="text-center title-2">Input Project</h3>
                                         </div>
                                         <hr>
+                                            <div class="form-group">
+                                                <button  id='btnDJA' class='btn btn-info'>Ambil Data DJA</button>
+                                                <button  id='btnManual' class='btn btn-warning'>Input Manual</button>
+                                            </div>
                                         <form method="post" action="project/simpan.php" novalidate="novalidate">
                                             <div class="form-group has-success">
                                                 <input id="no_project" name="no_project" type="hidden" class="form-control" aria-required="true" aria-invalid="false" value="<?php echo $data['no_project']; ?>">
@@ -52,11 +59,11 @@ $data  = mysqli_fetch_array($resultEdit);
                                                 <label for="cc-payment" class="control-label mb-1">Nama Project</label>
                                                 <input id="nama_project" name="nama_project" type="text" class="form-control" aria-required="true" aria-invalid="false" value="<?php echo $data['nama_project']; ?>" >
                                             </div>
-                                            <div class="form-group">
-                                                <label for="cc-number" class="control-label mb-1">Tanggal Rencana</label>
-                                                <input id="tanggal_rencana" name="tanggal_rencana" type="date" class="form-control" value="<?php echo $data['tanggal_rencana']; ?>">
-                                                <span class="help-block" ></span>
-                                            </div>
+                                        <div class="form-group">
+                                            <label class="control-label mb-1">Tanggal Rencana</label>
+                                            <input id="tanggal_rencana" name="tanggal_rencana" type="date" class="form-control cc-number identified visa" value="<?php echo $tanggal_rencana->format('Y-m-d'); ?>" tabindex="7" >
+                                            <span class="help-block" data-valmsg-data-valmsg-replace="true"></span>
+                                        </div>
 
                                             <div class="form-group">
                                                 <input id="simpan" name="simpan" type="hidden" class="form-control" aria-required="true" aria-invalid="false">
@@ -67,13 +74,13 @@ $data  = mysqli_fetch_array($resultEdit);
                                                     // echo $hal;
 
                                                     if ($hal == 'delete') {
-                                                        echo "<button type='submit' id='btnDelete' class='btn btn-primary' onclick='return confirm_alert(this);'>Delete</button>";
+                                                        echo "<button type='submit' id='btnDelete' class='btn btn-danger' onclick='return confirm_alert(this);'>Delete</button>";
                                                      }
                                                      else if($hal == 'add'){
-                                                        echo "<button type='submit' id='btnTambah' class='btn btn-primary'>Simpan</button>";
+                                                        echo "<button type='submit' id='btnTambah' class='btn btn-danger'>Simpan</button>";
                                                     }
                                                      else if($hal == 'edit'){
-                                                        echo "<button type='submit' id='btnEdit' class='btn btn-primary'>Simpan</button>";
+                                                        echo "<button type='submit' id='btnEdit' class='btn btn-danger'>Simpan</button>";
                                                     }
 
                                                 ?>

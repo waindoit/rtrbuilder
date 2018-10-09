@@ -8,7 +8,7 @@
                                 </form>
                                 <br>
                                 <div class="table-responsive table--no-card m-b-30">
-                                    <table class="table table-striped" id="barang">
+                                    <table class="table table-striped" id="penyusunan">
                                         <thead>
                                             <tr style="background-color: #ccc;">
                                                 <th>No</th>

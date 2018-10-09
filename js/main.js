@@ -11,14 +11,14 @@
     if (ctx) {
       ctx.height = 150;
       var myChart = new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
+          labels: ["Penyusunan", "Rekom Gubernur", "Persub", "DPRD", "Evaluasi Gubernur"],
           type: 'line',
           defaultFontFamily: 'Poppins',
           datasets: [{
-            label: "Rencana",
-            data: [0, 10, 20, 30, 40, 50, 60],
+            label: "Progress",
+            data: [40, 20, 15, 25, 10, 0],
             backgroundColor: 'transparent',
             borderColor: 'rgba(40,167,69,0.75)',
             borderWidth: 3,
@@ -26,16 +26,6 @@
             pointRadius: 5,
             pointBorderColor: 'transparent',
             pointBackgroundColor: 'rgba(40,167,69,0.75)',
-          }, {
-            label: "Realisasi",
-            data: [0, 2, 5, 12, 23, 33, 47],
-            backgroundColor: 'transparent',
-            borderColor: 'rgba(220,53,69,0.75)',
-            borderWidth: 3,
-            pointStyle: 'circle',
-            pointRadius: 5,
-            pointBorderColor: 'transparent',
-            pointBackgroundColor: 'rgba(220,53,69,0.75)',
           }]
         },
         options: {

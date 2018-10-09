@@ -6,7 +6,7 @@
                             <div class="col-lg-6">
                                 <div class="au-card m-b-30">
                                     <div class="au-card-inner">
-                                        <h3 class="title-2 m-b-40">RTR Pulau</h3>
+                                        <h3 class="title-2 m-b-40">RDTR Kawasan Perkotaan</h3>
                                         <canvas id="rtr-pulau"></canvas>
                                     </div>
                                 </div>
